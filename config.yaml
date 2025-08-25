@@ -1,0 +1,9 @@
+jira_base_url: "https://your-domain.atlassian.net"  # Replace with your Jira Cloud URL
+email: "your_email@example.com"                     # Replace with your Jira email
+api_token: "YOUR_JIRA_API_TOKEN"                    # Generate this from your Atlassian account settings: https://id.atlassian.com/manage-profile/security/api-tokens
+project_key: "PROJ"                                 # Replace with your Jira project key (e.g., "DEV", "PROJ")
+board_id: 123                                       # Replace with the numeric ID of your Jira board (found in the URL when viewing the board)
+recent_days: 1                                      # Number of days to consider for recently updated issues (to see those recently Closed)  
+engineers:                                          # List of engineer emails or exact Jira usernames
+  - "Anna Example"
+  - "bob@example.com"

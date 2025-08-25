@@ -1,0 +1,74 @@
+# Jira Sprint Issue Fetcher
+
+**Jira Sprint Issue Fetcher** is a Python command-line tool that retrieves issues from an active Jira Cloud sprint, filtered by engineer and update status. It uses Jira's REST API with HTTP Basic Authentication and is configured via a YAML file.
+
+## Features
+
+- **Authentication:** Securely connects to Jira Cloud using your email and API token.
+- **Configurable:** Reads all parameters (Jira URL, project key, board ID, days threshold, engineer list) from a YAML config file.
+- **Status & Recency:** Filters issues that are not 'Done', 'Closed', or 'Released', or were updated within the last N days.
+- **Clear Output:** The output will display the active sprint name, followed by each engineer's display name and the URLs of their corresponding issues, formatted for easy copy-pasting into documentation platforms like Confluence
+
+## Installation
+
+Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+## Configuration
+
+Create a YAML configuration file (e.g., `config.yaml`) with the following structure:
+
+```yaml
+jira_base_url: "https://your-domain.atlassian.net"
+email: "your-email@example.com"
+api_token: "your-api-token"
+project_key: "PROJECT"
+board_id: 123
+days_recent: 7
+engineers:
+  - "Alice Smith"
+  - "bob@example.com"
+  - "Charlie Doe"
+```
+
+## Usage
+
+Run the tool from the command line, providing your config file:
+
+```
+python sprint_fetcher.py config.yaml
+```
+
+Note: you can create seperate config file for each team
+
+## Output Example
+
+```
+Active Sprint: Sprint 42
+
+Alice Smith
+- https://your-domain.atlassian.net/browse/PROJECT-101
+- https://your-domain.atlassian.net/browse/PROJECT-105
+
+Bob Example
+- https://your-domain.atlassian.net/browse/PROJECT-110
+
+Charlie Doe
+(no matching issues)
+```
+
+## Error Handling
+
+- Invalid config or missing parameters: clear error message.
+- API failures (authentication, network, permissions): informative output.
+- No active sprint: message displayed.
+
+## License
+
+MIT License
+
+## Support
+
+For issues or feature requests, please open a GitHub issue.
