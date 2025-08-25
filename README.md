@@ -1,3 +1,5 @@
+Note: This is a result of trying vibe-coding with GPT-4.1. It took much longer than I expected—likely because my prompt-writing skills need improvement. For comparison, semi-traditional coding with Copilot support took me about 20 minutes, while vibe-coding took 2 hours. Eventually, I even used existing code to generate prompts with AI (still with limited success). In the end, I got it working in GPT-4.1, but not in GPT-5.
+
 # Jira Sprint Issue Fetcher
 
 **Jira Sprint Issue Fetcher** is a Python command-line tool that retrieves issues from an active Jira Cloud sprint, filtered by engineer and update status. It uses Jira's REST API with HTTP Basic Authentication and is configured via a YAML file.
