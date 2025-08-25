@@ -1,6 +1,5 @@
 # Jira Sprint Issue Fetcher
 
-**Jira Sprint Issue Fetcher** 
 A Python command-line tool that retrieves issues from the current Jira Cloud sprint and organizes them by engineer, making it easy to add notes. I use it as a draft for standup notes.
 
 Expected output example:
