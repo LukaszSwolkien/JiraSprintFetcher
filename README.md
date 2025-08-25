@@ -8,11 +8,11 @@ Expected output example:
 PI1 Sprint 2
 
 Anna Example
-  https://mycompany.atlassian.net/browse/PRJ-1256
-  https://mycompany.atlassian.net/browse/PRJ-1254
+  https://your-domain.atlassian.net/browse/PRJ-1256
+  https://your-domain.atlassian.net/browse/PRJ-1254
   
 Charlie Doe
-  https://mycompany.atlassian.net/browse/PRJ-1295
+  https://your-domain.atlassian.net/browse/PRJ-1295
 ```  
 It uses Jira's REST API with HTTP Basic Authentication and is configured via a YAML file.
 
