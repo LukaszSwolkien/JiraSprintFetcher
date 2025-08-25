@@ -5,7 +5,7 @@ Authenticate with the Jira instance using an email and an API token, both obtain
 
 Configuration:
 The script must read all necessary parameters from a YAML configuration file, which will be provided as a command-line argument.
-Required parameters include: the Jira base URL, a project key, a board ID, the number of days to consider for recently updated issues (N), and a list of engineer names or emails to query.
+Required parameters include: the Jira base URL, a project key, a board ID, the number of days to consider for recently updated issues (N), and a list of engineer names or emails to query. The parametes should have following names: email, api_token, jira_base_url, project_key, board_id, recent_days, engineers
 
 Issue Search:
 Retrieve the currently active sprint for the specified board. For each engineer listed in the configuration, search for issues within the active sprint that are assigned to them and meet either of the following conditions:
